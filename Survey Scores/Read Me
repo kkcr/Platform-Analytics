@@ -3,3 +3,12 @@
 The Customer Success Manager would like to gain additional insight into customer satisfaction scores submitted through Glide Haven’s Customer Satisfaction application and would like to correlate Incident metrics with Survey scores. In this lab, you perform configuration tasks and validate successful data collection in the Analytics Center. These tasks achieve the following goals:
 
 Track Survey submission volume and the average Survey Score Monitor the percentage of Incidents with a Survey Group and filter the Survey Scores by attributes
+
+
+Task - Task Summary
+Create a new Indicator Source - Indicator Source points to the Survey Scores table
+Create and configure new Automated Indicators - Indicator tracking daily count of survey submissions
+                                              - Indicator tracking the average CSAT Score
+Create and configure a new Formula Indicator - Indicator tracking the % of Incidents with surveys
+Implement Breakdowns and Breakdown Mappings	- Breakdown scores by Category, Priority, Assigned To, and Caller Location
+Collect historical data and schedule daily collection - Jobs to manage historical scores and future scores collection
