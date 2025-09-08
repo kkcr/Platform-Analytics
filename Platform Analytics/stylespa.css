@@ -1,0 +1,105 @@
+@media (prefers-color-scheme: dark) {
+            :root {
+                --totl-primary-background: rgb(0, 0, 0);
+                --totl-primary-font-color: #fff;
+                --totl-primate-font-descolor: #cecece;
+            }
+        }
+
+        body {
+            margin: 0;
+            /*font-family: Arial, sans-serif;*/
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #header {
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            font-size: xx-large;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 15px;
+        }
+
+        #maincon {
+            display: flex;
+            height: calc(100vh - 70px);
+        }
+
+        #mleftcon {
+            border-right: 1px solid #000;
+            width: 15%;
+            overflow-y: auto;
+            padding-top: 20px;
+        }
+
+        #mrightcon {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        #mleftcontitle {
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #mleftcon #mleftconcon a.overview_header {
+            display: block;
+            padding: 8px 12px;
+            background: #f1f1f1;
+            border-bottom: 1px solid #ddd;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #mleftcon #mleftconcon a.overview_header:hover {
+            background: #e1e1e1;
+        }
+
+        .tut_overview {
+            display: none;
+            padding-left: 15px;
+            background: #fafafa;
+        }
+
+        .tut_overview a {
+            display: block;
+            padding: 6px 12px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .tut_overview a:hover {
+            background: #ddd;
+        }
+        .tut_overview a.active {
+            font-weight: bold;
+            color:rgb(233, 12, 12);
+        }
+
+        .overview_header::after {
+            content: "▶";
+            float: right;
+            transition: transform 0.3s ease;
+            
+        }
+
+        .overview_header.active::after {
+            transform: rotate(90deg);
+        }
+
+        #mrightcon{
+            padding: 4%;
+            text-wrap: normal;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        #maintitle{
+            text-decoration: none;
+            color: #000;
+        }

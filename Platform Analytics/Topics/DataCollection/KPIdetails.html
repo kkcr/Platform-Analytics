@@ -1,0 +1,264 @@
+<html>
+<head>
+    <style>
+        h4 {
+            font-weight: bold;
+        }
+        li {
+            margin-left: 5%;
+        }
+        p {
+            margin-left: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincon">
+        <h3>KPI Details</h3>
+        <p>
+            KPI Details provides an in-depth analysis of Indicator performance using summary statistics, forecasting, breakdown navigation, and score comparisons. 
+            It enables a deeper understanding of business process metrics and performance trends.
+        </p>
+
+        <b>Overview</b>
+        <ul>
+            <li>Displays trends, breakdowns, and associated records for a specific indicator.</li>
+            <li>Allows users to select marker icons to explore additional information.</li>
+        </ul>
+
+        <b>Trend Line and Score Summary</b>
+        <ul>
+            <li>Shows the score points of the trend over time.</li>
+            <li>Selecting a point on the trend line updates the score summary to display the date, score, and percent change from the previous point.</li>
+            <li>Favorable changes (e.g., decrease in open incidents) are shown in green, and unfavorable changes are shown in red.</li>
+        </ul>
+
+        <b>Date Range</b>
+        <ul>
+            <li>Drill down to view score trends for a specific date range.</li>
+            <li>Time period can be changed by selecting two dates or using predefined periods such as 7 days, 1 month, 3 months, 6 months, YTD, or All.</li>
+        </ul>
+
+        <b>Indicator Records</b>
+        <ul>
+            <li>Toggle the "Show Records" button ON to view records collected for the selected time period.</li>
+            <li>Records are filtered based on any selected breakdown/element pairs.</li>
+            <li>Toggle the button OFF to return to the time series chart view.</li>
+        </ul>
+
+        <b>Info and Scores</b>
+        <ul>
+            <li>Select the Info icon to view indicator configurations such as description, frequency of collection, and forecast method.</li>
+            <li>The Scores tab shows a chronological listing of the indicator's score values.</li>
+        </ul>
+
+        <b>Key Terms</b>
+        <ul>
+            <li><b>Score Point:</b> Each point on the trend line shows the exact score and/or target on a given day.</li>
+            <li><b>Trend Line:</b> Approximates score movement over time; enabled by default but can be toggled off.</li>
+            <li><b>Score:</b> The latest value of an indicator.</li>
+        </ul>
+
+        <b>Navigation Options for KPI Details</b>
+        <ul>
+            <li><b>Via Dashboards:</b> Access KPI Details by selecting the data trend of any indicator in a dashboard.</li>
+            <li><b>Via Indicators List:</b> Search for an indicator in Platform Analytics > Library > Indicators and select it to open KPI Details.</li>
+            <li><b>Via Indicator Form:</b> Open an indicator in form view and use the "Explore Indicator" link to access KPI Details.</li>
+        </ul>
+
+        <b>Key Definitions</b>
+        <ul>
+            <li><b>Indicator:</b> A business process metric used to track and optimize service performance.</li>
+            <li><b>KPI Details:</b> Enables statistical analysis, drilldowns by attribute, and comparisons over time.</li>
+            <li><b>Data Visualization:</b> Visualizes indicator data on dashboards using charts, trends, pies, pivot tables, and other formats.</li>
+        </ul>
+
+        <b>Capabilities of KPI Details</b>
+        <ul>
+            <li>Analyze indicator performance using summary statistics and forecasting.</li>
+            <li>Drill down by attribute or breakdown to view granular data.</li>
+            <li>Compare indicator scores over time to identify trends and anomalies.</li>
+            <li>Supports informed decision-making based on historical and current performance data.</li>
+        </ul>
+
+         <h3>Indicator List</h3>
+        <p>
+            The Indicator List provides a quick overview of trends and changes for all configured indicators in the system.
+            It allows users to monitor performance at a glance and identify areas requiring attention.
+        </p>
+
+        <b>Key Features of the Indicator List</b>
+        <ul>
+            <li>Displays all available indicators along with their current scores.</li>
+            <li>Highlights trends and changes in indicator performance over time.</li>
+            <li>Enables filtering and searching by indicator name or attributes.</li>
+            <li>Provides quick access to KPI Details for deeper analysis.</li>
+            <li>Supports monitoring of multiple indicators from a single view.</li>
+        </ul>
+
+        <b>Use Cases</b>
+        <ul>
+            <li>Monitor day-to-day performance of key business processes.</li>
+            <li>Identify indicators that require further investigation.</li>
+            <li>Provide management with an overview of operational health.</li>
+        </ul>
+
+         <h3>Indicator Trend by Breakdown</h3>
+        <p>
+            Breakdowns are attributes used to group Indicator scores for deeper performance insights. They allow you to analyze trends based on specific categories or combinations of attributes.
+        </p>
+
+        <b>Breakdown Example</b>
+        <ul>
+            <li>For the <i>Number of Open Incidents</i> indicator, the Priority breakdown shows a separate trend for each priority value.</li>
+            <li>Priority breakdown elements include: 1-Critical, 2-High, 3-Moderate, 4-Low, 5-Planning.</li>
+        </ul>
+
+        <b>Breakdown Navigation</b>
+        <ul>
+            <li>Select the Filters button to display available breakdowns.</li>
+            <li>Choose a Breakdown.</li>
+            <li>Select a Breakdown Element to view its trend.</li>
+            <li>Click Apply to filter the chart by the selected element(s).</li>
+            <li>Trends can be navigated by a single breakdown or a combination of two breakdowns.</li>
+            <li>Configured breakdowns automatically appear in KPIs.</li>
+        </ul>
+
+        <b>Examples of Breakdown Navigation</b>
+        <ul>
+            <li><b>Single Breakdown:</b> Filter scores based on a single attribute, e.g., Priority = Low.</li>
+            <li><b>Combination of Two Breakdowns:</b> Filter scores based on two attributes, e.g., Category = Software and Priority = Low.</li>
+        </ul>
+
+        <b>Important Note</b>
+        <ul>
+            <li>Navigation by two breakdowns is only possible if the <i>Collect breakdown matrix</i> property is enabled.</li>
+        </ul>
+
+
+
+        <h3>Trend Visualization and Analysis</h3>
+        <p>
+            A Time Series applies different perspectives to your data so you can identify trends and patterns more easily. Aggregations combine calculations like AVG or SUM with a Period such as Week, Month, or Quarter. Platform Analytics allows you to adjust time series views dynamically after data collection.
+        </p>
+
+        <p><b>  1: Smooth the Data with a Rolling Average</b>
+        <ul>
+            <li>Daily time series is the default representation of an Indicator Score trend.</li>
+            <li>Apply a running average (7-day, 30-day) to smooth out the trend curve.</li>
+        </ul></p>
+        <p>
+        <b>  2: Aggregate Data to a Less Frequent Period</b>
+        <ul>
+            <li>Instead of daily scores, view weekly or monthly averages for a broader perspective.</li>
+            <li>By Period AVG aggregation recalculates trends based on the selected period.</li>
+        </ul></p>
+        <p>
+        <b>  3: Track Period to Date Scores</b>
+        <ul>
+            <li>View Periodic To Date AVG (Week, Month, Quarter, Year) to understand KPI performance to date.</li>
+            <li>Over 50 pre-defined Time Series aggregations are available out of the box.</li>
+        </ul></p>
+
+        <b>Visualization Types</b>
+        <ul>
+            <li>Line, Area, Column, or Spline charts can be used to visualize Indicator Scores.</li>
+        </ul>
+
+        <h4>Analysis Tools</h4>
+        <p>Use <b>Chart Options</b> and <b>Statistics</b> to better understand score trends, identify changes, and forecast future performance.</p>
+        
+        <b>Statistics Options</b>
+        <ul>
+            <li>Number of data points</li>
+            <li>Sum of all scores</li>
+            <li>Absolute and % change</li>
+            <li>Average, Minimum, Maximum, Median, Standard Deviation</li>
+        </ul>
+
+        <b>Chart Options</b>
+        <ul>
+            <li>Targets: Desired scores displayed as solid lines (black = global, grey = personal)</li>
+            <li>Thresholds: Horizontal dashed lines for critical levels</li>
+            <li>Forecast: Predict future scores based on trends</li>
+            <li>Trend: Linear trend line</li>
+            <li>Comments: Show system or user-added notes</li>
+            <li>Labels: Display main time series values</li>
+            <li>Statistics: Activate to view stats for selected date range</li>
+        </ul>
+
+        <b>Time Series Options</b>
+        <ul>
+            <li>Score (default)</li>
+            <li>Change</li>
+            <li>Change %</li>
+        </ul>
+
+        <b>Chart Type Options</b>
+        <ul>
+            <li>Line</li>
+            <li>Spline</li>
+            <li>Area</li>
+            <li>Column</li>
+        </ul>
+
+        <h4>Targets and Thresholds</h4>
+        <ul>
+            <li>Targets track personal or organizational goals and display a gap to target.</li>
+            <li>Thresholds visually indicate when scores exceed or drop below critical values.</li>
+            <li>Multiple thresholds can be configured; personal thresholds are grey, global thresholds are black.</li>
+            <li>Permissions: Admins/Power Users configure global and personal thresholds; others configure personal thresholds only.</li>
+        </ul>
+
+        <h4>Compare Record Sets</h4>
+        <ul>
+            <li>Compare records from two collection periods using the Compare button.</li>
+            <li>Categories in comparison include:</li>
+            <ul>
+                <li>First data set: Records from the first date.</li>
+                <li>Moved out: Present in first but missing in second.</li>
+                <li>Shared: Present in both periods.</li>
+                <li>Moved in: Present in second but missing in first.</li>
+                <li>Second data set: Records from the second date.</li>
+            </ul>
+            <li>Note: Compare tab is only available for Automated Indicators.</li>
+        </ul>
+         <h3>Visualization and Access Properties</h3>
+
+        <h4>KPI Details Display Options</h4>
+        <p>These options are configured in the Indicator definition to control how scores are displayed in KPI Details:</p>
+        <ul>
+            <li><b>Default time series:</b> Sets the default time series shown in KPI Details. Exclusions can be applied.</li>
+            <li><b>Default chart type:</b> Sets the default visualization (line, column, spline, area).</li>
+            <li><b>Live group profile:</b> Enables the live feed icon for the selected live feed group.</li>
+            <li><b>Render continuous lines:</b> Hides dates without scores to prevent gaps in the chart.</li>
+            <li><b>Show real-time score:</b> Displays the current indicator score and the state of associated records.</li>
+            <li><b>Show in library:</b> Makes the indicator visible in the Analytics Center under KPIs.</li>
+        </ul>
+
+        <h4>Access Control</h4>
+        <p>Access to an Indicator’s score trend is governed by its Access Control settings:</p>
+        <ul>
+            <li><b>Visible to Everyone:</b> Default configuration; anyone can view the indicator on shared dashboards.</li>
+            <li><b>Visible to Everyone + Roles:</b> Restricts visibility to specific roles.</li>
+            <li><b>Visible to Groups and Users:</b> Restricts visibility to selected users or groups.</li>
+        </ul>
+        <p>Only users with read access to the Indicator’s Facts table can view the underlying records.</p>
+
+        <h4>Forecasting Methods</h4>
+        <p>Indicators can generate forecasts using several methods:</p>
+        <ul>
+            <li><b>Auto:</b> System selects the best-fit method based on historical data.</li>
+            <li><b>Linear:</b> Linear regression forecast.</li>
+            <li><b>Seasonal:</b> Repeats the previous season’s pattern.</li>
+            <li><b>Seasonal Trend:</b> Seasonal pattern that changes over time.</li>
+            <li><b>STL (Seasonal Trend Loess):</b> Combines seasonal, trend, and noise filtering for best fit.</li>
+            <li><b>Random Forest:</b> Forecasts based on decision trees.</li>
+            <li><b>Auto Regressive:</b> Uses trend, seasonal dummies, and past values.</li>
+        </ul>
+        <p><b>Period Length:</b> Depends on Indicator frequency (Daily = 7 days, Weekly = 13 weeks, Monthly = 12 months).</p>
+        <p><b>Tip:</b> Set Forecasting method to <i>Auto</i> for best-fit selection across all algorithms.</p>
+    
+    </div>
+</body>
+</html>

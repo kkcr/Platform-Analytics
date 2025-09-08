@@ -1,0 +1,92 @@
+<html>
+<head>
+    <style>
+        h4 {
+            font-weight: normal;
+        }
+        li {
+            margin-left: 5%;
+        }
+        p {
+            margin-left: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincon">
+        <h3>Formula Indicators</h3>
+        <p>
+            Formula Indicators use existing indicators to calculate new metrics and provide deeper insights into business process performance.
+            Unlike Automated Indicators, Formula Indicators do not require an Indicator Source.
+        </p>
+
+        <b>Configuration and Formula Building</b>
+        <ul>
+            <li>Navigate to <i>Platform Analytics Administration > Indicators > Formula Indicators</i>.</li>
+            <li>Define the Formula Text using JavaScript syntax with references to existing indicators and breakdowns:
+                <ul>
+                    <li>Indicators: [[ Indicator ]]</li>
+                    <li>Breakdowns: [[ Indicator > Breakdown = Element ]]</li>
+                </ul>
+            </li>
+            <li>You can manually type the formula or use the <i>Browse for an Indicator</i> UI action to select indicators and breakdowns.</li>
+            <li>Use the <i>Apply time series to result</i> option to control whether time series calculations apply to each component or only the final result.</li>
+        </ul>
+
+        <b>Troubleshooting and Best Practices</b>
+        <ul>
+            <li>If a formula component is null or the denominator is 0, the formula evaluates to null (“No Score”).</li>
+            <li>Enable <i>Allow formula component to be NULL</i> to handle null values in conditional statements.</li>
+            <li>Example conditional handling:
+                <pre>
+if (denominator == null || denominator == 0) {
+    return -1;
+} else {
+    return numerator / denominator;
+}
+                </pre>
+            </li>
+            <li>Formulas are executed server-side and results are not stored in tables.</li>
+            <li>Complex formulas may impact system performance.</li>
+        </ul>
+
+        <hr>
+
+        <h3>Manual Indicators</h3>
+        <p>
+            Manual Indicators track trends in data or processes that are managed outside of ServiceNow. Data is entered manually or imported directly into the scores tables.
+        </p>
+
+        <b>Why Use Manual Indicators?</b>
+        <ul>
+            <li>Summarize information from external systems that is sensitive or unavailable in ServiceNow.</li>
+            <li>Allow users to track metrics that are not automatically collected.</li>
+        </ul>
+
+        <b>Configuration of Manual Indicators</b>
+        <ul>
+            <li>Manual Indicators are not based on an Indicator Source.</li>
+            <li>The <i>Contributor</i> property identifies users authorized to manually enter data via the Scoresheet.</li>
+        </ul>
+
+        <b>Manual Breakdowns</b>
+        <ul>
+            <li>Used to group data for Manual Indicators. Elements are entered manually and not stored in a Breakdown Source.</li>
+            <li>Steps to create a Manual Breakdown:
+                <ol>
+                    <li>Navigate to <i>Platform Analytics Administration > Breakdowns > Manual Breakdowns</i> and select New.</li>
+                    <li>Enter a Name and optional Description.</li>
+                    <li>Type in Breakdown Element values and adjust their order if needed.</li>
+                    <li>Associate the Breakdown with one or more Manual Indicators.</li>
+                    <li>Use <i>Aggregate scores...</i> in the Scoresheet to calculate SUM or Average of Indicator scores by Breakdown element.</li>
+                    <li>View the Indicator in KPI Details and edit the Scoresheet to add Breakdown Element data.</li>
+                </ol>
+            </li>
+        </ul>
+
+        <p>
+            Using Formula and Manual Indicators allows you to combine calculated metrics with manually tracked data to gain a comprehensive view of process performance.
+        </p>
+    </div>
+</body>
+</html>

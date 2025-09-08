@@ -1,0 +1,148 @@
+<html>
+<head>
+    <style>
+        h4 {
+            font-weight: normal;
+        }
+        li {
+            margin-left: 5%;
+        }
+        p {
+            margin-left: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincon">
+
+        <h3>Navigating Applications and Modules</h3>
+
+        <h3>Instance Access</h3>
+        <p>
+            The <b>Platform Analytics Administration</b> application contains modules that let you view and configure 
+            the different components required by business service analytics. 
+            In this section, you will access the instance and practice module navigation.
+        </p>
+        <ol>
+            <li>Log in to the ServiceNow personal lab environment using the instance URL and administrative credentials provided by ServiceNow University.</li>
+            <li>Confirm that the <b>System Administration homepage</b> is displayed before proceeding.</li>
+            <li>
+                For more convenience and easier navigation, select the <b>Pin</b> icon to pin the <i>All</i> menu.
+            </li>
+        </ol>
+
+        <h3>Module Navigation</h3>
+        
+                Type <b>Platform Analytics</b> in the Filter navigator field.
+                <p>
+                    This action displays only those modules and applications with “Platform Analytics” in the title, 
+                    including <b>Platform Analytics Administration</b>.
+                    <br>
+                    Note: All users have access to the <b>Platform Analytics</b> application, 
+                    but not all modules such as <i>Filters</i> and <i>Scheduled Export</i>.
+                
+                </p>
+                <h3>Performance Role-Based Analytics Navigation</h3>
+        <p>
+            Different Platform Analytics roles are restricted to specific functionality of the application. 
+            Below is a summary of what each role can do or access.
+        </p>
+
+        <ol>
+            <li>
+                <b>PA Admin</b>
+                <ul>
+                    <li>Can access all modules in <b>Platform Analytics Administration</b> (Data Sources, Indicators, Breakdowns, External Data, Text Analytics, Data Collector, Schedules, Properties, etc.).</li>
+                    <li>Can create Favorites for entire applications or modules.</li>
+                    <li>Can navigate to Dashboards and Indicators across the Library.</li>
+                </ul>
+            </li>
+
+            <li>
+                <b>PA Power User</b>
+                <ul>
+                    <li>Has similar access to PA Admin for modules like Indicators, Breakdowns, Data Collector, etc.</li>
+                    <li>Can create Favorites for applications or modules.</li>
+                    <li>Can work with Automated Indicators and view KPI data in the Library.</li>
+                </ul>
+            </li>
+
+            <li>
+                <b>PA Data Collector</b>
+                <ul>
+                    <li>Has access to <b>Data Collector</b> and <b>Data Sources</b>.</li>
+                    <li>Can view and manage scheduled data collection jobs.</li>
+                    <li>Can create Favorites for Jobs and Job Logs modules.</li>
+                </ul>
+            </li>
+
+            <li>
+                <b>PA Contributor</b>
+                <ul>
+                    <li>Can access limited modules like <b>Scoresheet</b>.</li>
+                    <li>Must be explicitly added to an Indicator to view its detailed score sheet.</li>
+                    <li>Can create Favorites for Scoresheet or entire applications.</li>
+                </ul>
+            </li>
+
+            <li>
+                <b>PA Viewer</b>
+                <ul>
+                    <li>Has the most restricted access.</li>
+                    <li>Can review contents of the Platform Analytics application but with fewer privileges compared to Contributor.</li>
+                    <li>Can create Favorites for entire applications.</li>
+                </ul>
+            </li>
+        </ol>
+
+                <h3>Content Pack Verification</h3>
+        <p>
+            Content Packs extend Platform Analytics with pre-built Indicators, Breakdowns, and Dashboards for specific processes or applications. 
+            Verification ensures the correct packs are installed and active in the instance.
+        </p>
+
+        <ol>
+            <li>
+                <b>Identify Installed Content Packs</b>
+                <ul>
+                    <li>Search for available <b>Content Packs</b> in the Plugins module.</li>
+                    <li>Review which solutions are available that align with processes or applications you manage.</li>
+                </ul>
+            </li>
+
+            <li>
+                <b>Confirm Installation</b>
+                <ul>
+                    <li>Check the <b>Installed</b> tab to confirm that required packs (e.g., <i>Incident SLA Management</i>) are present.</li>
+                    <li>Review summary details for each installed pack.</li>
+                </ul>
+            </li>
+
+            <li>
+                <b>Preview New Content</b>
+                <ul>
+                    <li>Verify new Indicators appear in <b>Automated Indicators</b> within Platform Analytics Administration.</li>
+                    <li>Use natural language filters (e.g., "indicator source contains incident") to confirm new data points.</li>
+                    <li>Check which additional Indicators were installed with the selected Content Pack.</li>
+                </ul>
+            </li>
+
+            <li>
+                <b>Validate Data Collection</b>
+                <ul>
+                    <li>Navigate to <b>Data Collector Jobs</b> to ensure data collection is scheduled for the new Indicators.</li>
+                    <li>Confirm that jobs are active and collecting analytics data as expected.</li>
+                </ul>
+            </li>
+        </ol>
+
+
+        <h3>Key Insight</h3>
+        <h4>
+            Navigation efficiency improves productivity. Using Favorites and search filters allows 
+            analysts and administrators to access Platform Analytics components quickly.
+        </h4>
+
+    </div>
+</body>
+</html>

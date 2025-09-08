@@ -1,0 +1,56 @@
+<html>
+<head>
+    <style>
+        h4 {
+            font-weight: normal;
+        }
+        li {
+            margin-left: 5%;
+        }
+        p {
+            margin-left: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincon">
+        <h3>Automated Indicator Configuration</h3>
+        <p>
+            An <b>Automated Indicator</b> is based on three key elements: <b>Indicator Source, Aggregate,</b> and optionally <b>Additional Conditions</b>.
+        </p>
+
+        <h4>Indicator Source</h4>
+        <p>
+            The Indicator Source specifies the base table and high-level query. 
+            <br>Example: <i>Incidents.Open</i> contains all incidents that are open and unresolved to date.
+        </p>
+
+        <h4>Aggregate</h4>
+        <p>
+            The Aggregate defines the operation applied to the Indicator Source data. Available aggregate functions include:
+        </p>
+        <ul>
+            <li><b>Count:</b> Counts all records. Example: Number of Open Incidents.</li>
+            <li><b>Distinct Count:</b> Counts distinct values. Example: Count distinct of Resolved Incident SLAs.</li>
+            <li><b>Sum:</b> Sums values. Example: Sum of all Reassignments of Open Incident SLAs.</li>
+            <li><b>Average:</b> Calculates the average. Example: Average Reassignment Count of Closed Changes.</li>
+            <li><b>Minimum:</b> Returns the minimum value in the dataset.</li>
+            <li><b>Maximum:</b> Returns the maximum value in the dataset.</li>
+        </ul>
+
+        <h4>Additional Conditions</h4>
+        <p>
+            Additional Conditions refine the data from the Indicator Source. 
+            <br>Example: Apply the condition <i>Reassignment count > 0</i> to <i>Incidents.Open</i> to focus only on incidents that have been reassigned.
+        </p>
+
+        <h4>Summary</h4>
+        <p>
+            By configuring the Indicator Source, Aggregate, and Additional Conditions, Automated Indicators automatically calculate and track metrics over time, giving actionable insights into your process performance.
+        </p>
+
+
+
+    </div>
+</body>
+</html>

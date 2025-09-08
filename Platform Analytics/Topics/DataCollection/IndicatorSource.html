@@ -1,0 +1,114 @@
+<html>
+<head>
+    <style>
+        
+        h4 {
+            font-weight: normal;
+        }
+        li {
+            margin-left: 5%;
+        }
+        p {
+            margin-left: 2%;
+        }
+        b {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincon">
+
+        <h3>Indicator Sources</h3>
+        <p>
+            Indicator Sources define the sub-set of data you want to see from business tables.
+            Data Collection executes the SQL statements defined in Conditions for every period that the job is run.
+        </p>
+
+        <b>Indicator Source Example</b>
+        <p>
+            Example: Incidents.closed indicator source with condition <i>'Closed on today'</i>.
+        </p>
+
+        <p>
+            Collection retrieves the Indicator Source data for each period and uses it to calculate the Indicator Score for that period.
+            Every Indicator Source has a dynamic DATE condition built on a Date/Time field and a time-related option.
+        </p>
+
+        <b>Indicator Score Calculation</b>
+        <p>
+            Scores are calculated by counting or aggregating records in the Indicator Source.
+            Indicator Scores are calculated during collection using the Source (base data) and applying aggregates such as count, sum, average, min/max, as well as additional conditions.
+        </p>
+
+        <b>Examples of Indicators Based on the Incidents.Closed Source</b>
+        <ul>
+            <li>Number of closed incidents</li>
+            <li>Number of incidents closed by Self Service</li>
+            <li>Number of incidents not solved</li>
+            <li>Summed duration of closed incidents</li>
+        </ul>
+
+        <h3>Data Collection Terms</h3>
+<p>
+Data Collection enables the visualization of KPIs in dashboards by running scheduled jobs that collect scores over time. Hundreds of best practice KPIs and related collection jobs are available in bundles called Analytics Solutions or Content Packs.
+</p>
+<p>
+A Data Collection job defines the indicators to collect and the time period for collection. By running scheduled data collection regularly, performance trends over time can be built. Indicators sharing the same source should be grouped in the same job. 
+</p>
+<p><b>Key Configuration Fields for Data Collection Jobs:</b></p>
+<ul>
+    <li><b>Indicators:</b> Select the indicators to include in the job.</li>
+    <li><b>Relative Start / Relative End (Daily):</b> Defines the period to collect scores for (e.g., 1 day ago for yesterday’s data).</li>
+    <li><b>Start / End Dates (Historic):</b> Define the historical period to collect data for.</li>
+    <li><b>Frequency:</b> Daily, Weekly, or Monthly (for periodic collection).</li>
+    <li><b>Repeat Interval (Historic):</b> Determines how often the job runs during historical collection.</li>
+    <li><b>Active:</b> Enable or disable the job for automatic execution.</li>
+    <li><b>Grouping:</b> Group indicators with the same Indicator Source together.</li>
+    <li><b>Override Existing Data (Historic):</b> Historic collection replaces existing scores for the selected period.</li>
+</ul>
+
+
+<h3>Data Collection Types</h3>
+<h4><b>1. Daily (Periodic) Data Collection:</b></h4>
+<p>
+Collects indicator scores for a single day or period at regular intervals to build performance trends over time. It is the most common and smallest frequency for ongoing monitoring.
+</p>
+<p><b>Key Configuration Fields:</b></p>
+<ul>
+    <li>Relative Start / Relative End - period to collect scores for (e.g., yesterday).</li>
+    <li>Indicators - which indicators to include.</li>
+    <li>Grouping - group indicators with the same source together.</li>
+    <li>Frequency - Daily, Weekly, or Monthly.</li>
+    <li>Active - enable or disable automatic execution.</li>
+</ul>
+
+<h4><b>2. Historic Data Collection:</b></h4>
+<p>
+Collects scores for multiple past periods to populate historical trends. Typically used in new deployments to establish baseline data.
+</p>
+<p><b>Key Configuration Fields:</b></p>
+<ul>
+    <li>Start / End Dates - define the historical period to collect data for.</li>
+    <li>Indicators - select indicators to populate historical scores.</li>
+    <li>Repeat Interval - how often the job runs during historic collection.</li>
+    <li>Grouping - group indicators with the same source together.</li>
+    <li>Active - enable or disable execution.</li>
+    <li>Override Existing Data - replaces existing scores for the selected period.</li>
+</ul>
+
+<h3>Historic Collection Exclusions</h3>
+<p>
+Certain indicators cannot be accurately calculated during historic collection due to changes in record values over time. Indicators such as "Number Incidents Not Updated in Last 5 Days" or "Number Incidents Not Updated in Last 30 Days" should be excluded from historic collection and instead added to daily collection jobs to capture accurate trends.
+</p>
+<p>
+For some breakdowns, like Assignment Group or State on open records, historical scores may not be accurate because historic collection only sees the most current value. These breakdowns should be excluded from historic collection and collected using daily jobs.
+</p>
+<p>
+Indicator and breakdown exclusions are configured on the Data Collection Job form.
+</p>
+
+
+    </div>
+</body>
+</html>

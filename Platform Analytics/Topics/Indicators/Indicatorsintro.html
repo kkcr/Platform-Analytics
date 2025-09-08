@@ -1,0 +1,89 @@
+<html>
+<head>
+    <style>
+        h4 {
+            font-weight: normal;
+        }
+        li {
+            margin-left: 5%;
+        }
+        p {
+            margin-left: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincon">
+        <h3>Indicators Defined</h3>
+        <p>
+            An <b>Indicator</b> is a process metric designed to continuously measure a specific process characteristic or behavior.
+        </p>
+
+        <p>
+            Platform Analytics uses three main types of Indicators:
+        </p>
+
+        <h4>1. Automated Indicators</h4>
+        <p>
+            Automated Indicators are populated by scheduled Data Collection. Once configured, data trends are built automatically over time.
+        </p>
+        <p><b>Example:</b> The <i>Number of open incidents</i> indicator is calculated daily by counting all incidents in the Open.Incidents Indicator Source during Data Collection.</p>
+
+        <h4>2. Formula Indicators</h4>
+        <p>
+            Formula Indicators are constructed by combining one or more existing indicators using a mathematical statement.
+        </p>
+        <p><b>Example:</b> The <i>% of New Critical Incidents</i> indicator is calculated by dividing the total of New Critical Incidents by the total of All New Incidents and multiplying by 100.</p>
+
+        <h4>3. Manual Indicators</h4>
+        <p>
+            Manual Indicators are based on externally imported data. They are populated manually rather than by automated data collection.
+        </p>
+        <p><b>Example:</b> The <i>Number of Zoom outages</i> indicator is populated using a monthly Excel report containing outage statistics.</p>
+        
+
+         <h3>Sources and Indicators</h3>
+        <p>
+            <b>Indicator Sources</b> define the subset of data you want to see from business tables. They act as the foundation for Automated Indicators to calculate metrics.
+        </p>
+
+        <h4>Indicator Score Calculation</h4>
+        <p>
+            Indicator Scores are calculated by applying aggregates such as <b>count, sum, average, min/max</b>, and/or additional filter conditions.
+        </p>
+
+        <p>Select each card to understand examples of indicators based on the <i>Incidents.Open</i> source:</p>
+        <ul>
+            <li><b>Number of open incidents:</b> Count of all records in Incidents.Open</li>
+            <li><b>Number of reassigned open incidents:</b> Count of all records in Incidents.Open where Reassignments > 1</li>
+            <li><b>Summed age of open incidents:</b> Sum of the age of all records in Incidents.Open</li>
+        </ul>
+
+        <h4>Indicator Source Configuration</h4>
+        <p>
+            An Indicator Source defines a <b>Process Table (Facts Table)</b> and <b>Filter Condition(s)</b>. For every process you plan to measure, you must:
+        </p>
+        <ul>
+            <li>Identify the base process table.</li>
+            <li>Identify the records of interest.</li>
+            <li>Create an Indicator Source for those records.</li>
+        </ul>
+
+        <p>
+            For most applications, there are typically three main Indicator Sources of interest: <b>New, Open, and Closed</b>.
+        </p>
+
+        <h4>Examples of Incident Management Indicator Sources</h4>
+        <ul>
+            <li><b>NEW:</b> Retrieves newly opened incidents for the day. Runs daily. Uses a date condition on Created or Opened fields, where the dynamic <i>Today</i> operator is replaced by the current date during collection.</li>
+            <li><b>OPEN:</b> This source retrieves the cumulative number of opened and unresolved incidents on today's date and runs daily.</li>
+            <li><b>CLOSED:</b> This source retrieves the number of closed incidents on today's date and runs daily.</li>
+            <li><b>RESOLVED:</b> This source retrieves the number of resolved incidents on today's date and runs daily.</li>
+        </ul>
+
+        <p>
+            Automated Indicators use these Indicator Sources to calculate and track metrics over time, ensuring that the data in your KPIs reflects accurate and up-to-date process performance.
+        </p>
+    </div>
+</body>
+</html>

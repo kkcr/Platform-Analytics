@@ -1,0 +1,83 @@
+<html>
+<head>
+    <style>
+        h4 {
+            font-weight: normal;
+        }
+        li {
+            margin-left: 5%;
+        }
+        p {
+            margin-left: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincon">
+        <h3>Data Collection</h3>
+        <p>
+            Data Collection is the process that enables the visualization of KPIs in Data Visualizations and Next Experience Dashboards. 
+            It provides the foundation for accurate trend analysis by capturing business process performance over time.
+        </p>
+
+        <b>How Does Data Collection Work?</b>
+        <ul>
+            <li>Generates periodic snapshots of business process records to build accurate process trends.</li>
+            <li>Retrieves Indicator Scores from process tables by running regularly scheduled jobs.</li>
+            <li>Jobs calculate Indicator Scores and store them in dedicated score tables.</li>
+            <li>Platform Analytics visualizations use these score tables to display trends in dashboards.</li>
+        </ul>
+
+        <b>Four-Step Process Overview</b>
+        <ol>
+            <li>Platform Analytics data and business process data coexist within the same ServiceNow instance.</li>
+            <li>Data Collection jobs run on schedule to retrieve process records.</li>
+            <li>Indicator Scores are calculated and stored in Platform Analytics score tables.</li>
+            <li>Dashboards and visualizations display the collected scores as trends and KPIs.</li>
+        </ol>
+
+        <b>Core PA Data Tables</b>
+        <p>Indicator Scores are stored across multiple tables depending on breakdown levels:</p>
+        <ul>
+            <li><b>Snapshots [pa_snapshots]</b> – Stores record sys_ids.</li>
+            <li><b>Scores Level 1 [pa_scores_l1]</b> – Stores scores for indicators and 1st-level breakdowns.</li>
+            <li><b>Scores Level 2 [pa_scores_l2]</b> – Stores scores for 2nd-level breakdowns.</li>
+        </ul>
+
+        <b>Types of Data Sources in Platform Analytics</b>
+        <p>Data for Indicators comes from several sources that drive analytics:</p>
+        <ol>
+            <li>
+                <b>Indicators (KPI)</b>
+                <p>Define the measurement you want to track or calculate to assess process performance. Example: <i>Number of open incidents</i>.</p>
+            </li>
+            <li>
+                <b>Breakdowns</b>
+                <p>Allow grouping of indicator results by qualitative attributes such as Priority, Category, or Assignment Group. Example: <i>Priority breakdown of open incidents</i>.</p>
+            </li>
+            <li>
+                <b>Data Collectors</b>
+                <p>Scheduled jobs that read process tables and populate the Score and Snapshot tables. Example: <i>[PA Incident] Daily Data Collection job</i>.</p>
+            </li>
+            <li>
+                <b>Automated Indicators</b>
+                <p>Pre-configured indicators that are calculated automatically based on defined rules and data sources.</p>
+            </li>
+            <li>
+                <b>External Data Sources</b>
+                <p>Data imported from outside systems to enrich analytics or supplement internal process tables.</p>
+            </li>
+            <li>
+                <b>Text Analytics</b>
+                <p>Use natural language processing to extract KPIs from unstructured text data, such as incident descriptions or user feedback.</p>
+            </li>
+        </ol>
+
+        <p>
+            These data sources work together to ensure that Platform Analytics provides accurate, up-to-date, and actionable insights.
+        </p>
+
+
+    </div>
+</body>
+</html>

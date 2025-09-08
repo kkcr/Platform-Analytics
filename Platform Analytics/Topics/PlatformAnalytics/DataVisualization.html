@@ -1,0 +1,116 @@
+<html>
+<head>
+    <style>
+        h4 {
+            font-weight: normal;
+        }
+        li {
+            margin-left: 5%;
+        }
+        p {
+            margin-left: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincon">
+        <h3>Data Visualization and Types</h3>
+        <p>
+            New Data Visualizations are often created in-line directly from the dashboard canvas.
+            The default visualization type is a <b>Single Score</b>, which can be changed in the Configuration panel.
+        </p>
+
+        <h4>Creating a New Visualization</h4>
+        <ul>
+            <li>Select <b>Data Visualization</b> from the Add new element menu.</li>
+            <li>Choose <b>New Visualization</b>.</li>
+            <li>A blank visualization is added, and the Configuration panel opens.</li>
+            <li>Resize and move the element on the canvas as needed.</li>
+            <li>Save your changes by selecting the <b>Save</b> button.</li>
+        </ul>
+
+        <h4>Types of Data Visualizations</h4>
+        <p>
+            Each visualization type is designed to display data differently. Select the right type
+            based on the metric and story you want to present:
+        </p>
+        <ul>
+            <li><b>Score Visualizations</b> - Show a single value (e.g., KPI as number/percentage).</li>
+            <li><b>Bar Visualizations</b> - Compare scores across dimensions (Horizontal or Vertical).</li>
+            <li><b>Pie & Donut</b> - Show parts-to-whole relationships (segments total 100%).</li>
+            <li><b>Time Series (Trends)</b> - Emphasize data over time and changes in values.</li>
+            <li><b>Time Series (Comparisons)</b> - Compare categorical data across sources over time.</li>
+            <li><b>Multidimensional Charts</b> - Show relationships between multiple variables.</li>
+            <li><b>Other Visualizations</b> - Calendars, lists, or scorecards.</li>
+        </ul>
+
+        <h3>Defining a Data Source</h3>
+        <p>
+            Every visualization needs a data source. The most common types are:
+        </p>
+        <ul>
+            <li><b>Table Data Source</b> - Current state of records in a table (rows = records, columns = fields).</li>
+            <li><b>Indicator Data Source</b> - Metric-driven data used for tracking KPIs and trends.</li>
+        </ul>
+        <p>
+            To add a source: Select <b>+ Add data source</b> from the Configuration panel and
+            define filters or conditions for accuracy.
+        </p>
+
+        <h3>Configuring Metric Aggregation</h3>
+        <p>
+            Metrics define the calculation applied to your dataset. By default, metrics are set to <b>COUNT</b>.
+            Other options include:
+        </p>
+        <ul>
+            <li>Sum of a field</li>
+            <li>Average of a field</li>
+            <li>Count distinct records</li>
+            <li>Minimum or Maximum field value</li>
+        </ul>
+        <p>
+            Always provide a clear label for the metric (e.g., “Avg Reassignment”) for business readability.
+        </p>
+
+        <h3>Visualization and Display Settings</h3>
+        <p>
+            Once your visualization, data source, and metric are configured, adjust chart settings:
+        </p>
+        <ul>
+            <li><b>Header & Border</b> - Show chart title, description, or borders.</li>
+            <li><b>Data Update</b> - Apply refresh intervals, filters, or live updates.</li>
+            <li><b>Presentation</b> - Adjust score size, icons, and overall chart layout.</li>
+        </ul>
+
+        <h3>Dashboard Filters</h3>
+        <p>
+            Filters refine data shown on a dashboard. Types include:
+        </p>
+        <ul>
+            <li><b>Single Select</b> - One value from a set of choices.</li>
+            <li><b>Multiple Select</b> - Several values at once (e.g., High + Critical).</li>
+            <li><b>Date</b> - Calendar or time-based filtering.</li>
+            <li><b>True/False</b> - Binary values (e.g., Active = True).</li>
+        </ul>
+        <p>
+            Filter sources can be defined by Table fields or Indicator Breakdowns.
+        </p>
+
+        <h3>Managing Data Visualizations</h3>
+        <p>
+            While editing a visualization, use the <b>Ellipse (…)</b> menu for management actions:
+        </p>
+        <ul>
+            <li><b>Add to Library</b> - Save visualizations for reuse across dashboards.</li>
+            <li><b>Duplicate</b> - Copy a visualization for quick modifications.</li>
+            <li><b>Share</b> - Grant View/Edit permissions to users, groups, or roles.</li>
+            <li><b>Export</b> - Download or email as PDF, PNG, JPEG (various formats/sizes).</li>
+            <li><b>Bookmark</b> - Quick access under Bookmarked Visualizations.</li>
+            <li><b>Delete</b> - Permanently remove the visualization (Admin/viz_admin required).</li>
+        </ul>
+        <p>
+            Note: Only visualizations saved to the Library appear in the Analytics Center for sharing and exporting.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<html>
+<head>
+    <style>
+        h4 {
+            font-weight: normal;
+        }
+        li {
+            margin-left: 5%;
+        }
+        p {
+            margin-left: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincon">
+
+        <h3>What is Platform Analytics?</h3>
+        <h4>
+            Centralize performance analytics, user experience analytics, and reporting in one location. Share actionable insights quickly and easily. 
+            <li>Anticipate trends, prioritize resources, and continuously improve with real-time analytics.</li>
+            <li>Create on-demand reports using a single data model for instant, up-to-date insights.</li>
+            <li>Uncover trends and patterns using in-platform process mining.</li>
+        </h4>
+        
+        <h3>Examples of Analytics</h3>
+        <h4>
+            Platform Analytics ships with pre-configured Dashboards and Key Performance Indicators (KPIs) tailored to support a variety of processes. Below are some examples of Dashboards targeting different process stakeholders.
+            <li>The Incident Management Dashboard provides analytics on incident volume, state, category, priority, resolution rates, etc., and organizes the information by incident State.</li>
+            <li>The Virtual Agent Overview Dashboard provides analytics on conversations, their completion status and duration, topics, channels, and users.</li>
+            <li>The Vulnerability Analytics Dashboard provides an executive view into vulnerabilities and vulnerable items, helping the Vulnerability Admin pinpoint areas of concern quickly.</li>
+            <li>The HR Executive Dashboard provides accountability, progress, performance metrics, and status of HR cases.</li>
+        </h4>
+
+        <h3>What is Really Needed?</h3>
+        <h4>
+            <li>Metrics clearly connected to goals that matter to the Glide Haven leadership and stakeholders.</li>
+            <li>Dashboards that provide actionable information.</li>
+            <li>Analytics within the context of a process or a workflow supporting daily actions and behavior.</li>
+            <li>Dashboards and visualizations designed to tell a clear story, tailored for the needs of the audience.</li>
+        </h4>
+
+         <h3>Key Insight</h3>
+        <h4>
+            Visualize actionable KPIs that tell the story of your business process and display the right level of information to their intended viewers.
+        </h4>
+
+        <h3>Table Queries:</h3>
+        <h4>
+            <li>Return a data summary measured at a specific time. It describes a process at the current moment.</li>
+            <li>Measure process outputs when no historical Trend is required.</li>
+            <li>Provide real-time status updates and summaries of past information.</li>
+        </h4>
+
+        <h3>Analytics Trend:</h3>
+        <h4>
+            <li>Presents a series of measurements collected over time. The Trend describes how a process has changed and evolved over a period of time.</li>
+            <li>Visualizes performance Trends against targets and uses notifications. This allows a Process Owner to take action as soon as performance degradation is detected.</li>
+            <li>Provides the ability to correlate multiple business processes and derive new metrics.</li>
+            <li>Example: What is the percentage of Critical incidents not worked on in the last 24 hours?</li>
+        </h4>
+        
+        <h3>Architecture and Components</h3>
+        <p>
+            Trust the process...  
+            The ServiceNow implementation team at Glide Haven is on a mission to educate its stakeholders on the application's architecture and data flow so that stakeholders trust the data visualizations and can accurately state new requirements or request configuration changes.
+        </p>
+
+        <h3>Key Platform Analytics Objects</h3>
+
+        <ol>
+            <li>
+                <b>Indicator (KPI)</b>
+                <p>
+                    Defines a specific measurement you can count or calculate to assess process performance and forecast future trends.  
+                    Example: The <i>Number of open incidents</i> indicator returns a count of all open incidents.
+                </p>
+
+            </li>
+
+            <li>
+                <b>Breakdown</b>
+                <p>
+                    The ability to group (breakdown) indicator scores by a qualitative attribute, such as Priority, Category, or Assignment Group.  
+                    Example: The <i>Priority breakdown</i> applied to the Number of open incidents indicator shows performance across all incident priorities—Planning, Low, Moderate, High, and Critical.
+                </p>
+
+            </li>
+
+            <li>
+                <b>Data Collector</b>
+                <p>
+                    The engine that takes periodic snapshots of your process tables and stores them in the Scores and Snapshots tables for performance analysis.  
+                    Example: The <i>[PA Incident] Daily Data Collection</i> job runs daily and populates data for multiple indicators, retrieving the right set of records from the incident table.
+                </p>
+
+            </li>
+
+            <li>
+                <b>KPI Details</b>
+                <p>
+                    An exploratory view of indicator results used for detailed analysis. It lets you see trends, predictions, breakdowns, and the associated records for a specific indicator.  
+                    Example: The <i>% of incidents resolved by first assigned group</i> KPI details allow you to scrutinize all indicator data collected so far.
+                </p>
+
+            </li>
+
+            <li>
+                <b>Data Visualization</b>
+                <p>
+                    A reusable view of indicator scores that can present data as a single value, a historical trend chart, or one of many other visualizations. These can be arranged on the dashboard canvas.  
+                    Example: A visualization displays <i>Number of open incidents</i> as a Time Series trend.
+                </p>
+ 
+            </li>
+
+            <li>
+                <b>Next Experience Dashboard</b>
+                <p>
+                    A collection of visualizations that describe a process or service behavior and target a specific audience.  
+                    Example: The <i>Incident Management Dashboard</i> contains Incident-related visualizations (single score, breakdown, scorecard, etc.) organized in tabs to give a full picture of the Incident Management process.
+                </p>
+
+            </li>
+        </ol>
+
+    </div>
+</body>
+</html>

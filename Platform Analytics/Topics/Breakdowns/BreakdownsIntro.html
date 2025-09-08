@@ -1,0 +1,74 @@
+<html>
+<head>
+    <style>
+        h4 { font-weight: bold; }
+        li { margin-left: 5%; }
+        p { margin-left: 2%; }
+    </style>
+</head>
+<body>
+    <div class="maincon">
+        <h3>Sources, Breakdowns, and Mappings</h3>
+
+        <p>A <b>Breakdown Source</b> defines the elements by which you can group or analyze Indicator data. It is based on a Facts Table and optional filter conditions. Each element is usually uniquely identified by a <i>sys_id</i> or similar field.</p>
+
+        <h4>Example Breakdown Source</h4>
+        <ul>
+            <li><b>Incident.Category:</b> Breakdown elements include Inquiry/Help, Software, Hardware, Network, and Database.</li>
+            <li><b>Facts Table:</b> The table that holds the breakdown elements.</li>
+            <li><b>Field:</b> The unique identifier field for each element.</li>
+            <li><b>Conditions:</b> Filters to narrow down the specific elements to include.</li>
+        </ul>
+
+        <h4>Types of Breakdowns</h4>
+        <ul>
+            <li><b>Automated Breakdowns:</b> Populated automatically during data collection.
+                <ul>
+                    <li>Tasks: Configure a Breakdown Source, create a Breakdown Mapping linking it to Indicators, enable collection.</li>
+                </ul>
+            </li>
+            <li><b>Manual Breakdowns:</b> Populated manually by importing external data.
+                <ul>
+                    <li>Tasks: Import data manually into the breakdown table and map it to Indicators.</li>
+                </ul>
+            </li>
+            <li><b>Scripted Breakdowns:</b> Populated via custom scripts.
+                <ul>
+                    <li>Tasks: Write a script to calculate breakdown elements dynamically, map them to Indicators, and schedule data collection.</li>
+                </ul>
+            </li>
+        </ul>
+
+        
+        <h4>Breakdown Mapping</h4>
+            <p>Specify which field on the Indicator Source references the Breakdown Source. If no appropriate field is available, specify a script to query the Indicator Source.</p>
+        <ul>
+            <li>Before you begin: Assign a Breakdown Source to the Breakdown before creating the mapping.</li>
+            <li>Role required: The same as for creating a Breakdown.</li>
+            <li>This mapping allows the Incident data to be analyzed or grouped by Breakdown values, such as Category, Priority, or State.</li>
+        </ul>
+
+        <h4>Manage Breakdowns Utility</h4>
+        <ul>
+            <li>Drag-and-drop interface to quickly add and map Breakdowns to Indicators.</li>
+            <li>Add new Breakdowns like Age, Priority, and State to an indicator such as Number of Open Incidents.</li>
+            <li>Mapped vs. unmapped Breakdowns: Adding an unmapped Breakdown automatically creates a mapping.</li>
+            <li>Too many Breakdown elements or combinations can impact performance. Use the <b>Collect Breakdown Matrix</b> property to manage multi-layer breakdowns efficiently.</li>
+        </ul>
+
+        <h4>Breakdown Matrix and Exclusions</h4>
+        <ul>
+            <li>The Breakdown Matrix allows navigation of trend data by combinations of breakdowns, e.g., Category + Priority.</li>
+            <li>Preview data to collect and disable unnecessary combinations using Breakdown Exclusions.</li>
+            <li>De-selecting cells in the Breakdown Matrix prevents data collection for specific breakdown combinations, reducing unnecessary storage and processing.</li>
+        </ul>
+
+        <h4>Use Cases and Benefits</h4>
+        <ul>
+            <li>Analyze overall trends, then drill down by Category, Priority, or Age.</li>
+            <li>Identify bottlenecks or areas for improvement, such as high counts in specific categories or low-priority incidents that could be automated.</li>
+            <li>Enable actionable insights from high-level metrics by breaking them down into meaningful segments.</li>
+        </ul>
+    </div>
+</body>
+</html>

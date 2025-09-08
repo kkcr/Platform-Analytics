@@ -1,0 +1,89 @@
+<html>
+<head>
+    <style>
+        h4 {
+            font-weight: bold;
+        }
+        li {
+            margin-left: 5%;
+        }
+        p {
+            margin-left: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincon">
+        <h3>Targets and Thresholds</h3>
+        <p>
+            Targets and Thresholds help monitor and improve business process performance by setting goals and alerting on deviations.
+        </p>
+
+        <h4>Targets Overview</h4>
+        <ul>
+            <li>Targets define quantifiable goals for Indicators, providing context and direction for process improvement.</li>
+            <li>Targets can be Personal (visible only to the user) or Global (visible to all users).</li>
+            <li>Target creation requires:
+                <ul>
+                    <li>Target Type (For me / For everyone)</li>
+                    <li>Target Value</li>
+                    <li>Target Start Date</li>
+                    <li>Target Review Date</li>
+                </ul>
+            </li>
+            <li>Enable the Targets chart option in KPI Details to view existing Targets.</li>
+        </ul>
+
+        <h4>Managing Targets</h4>
+        <ul>
+            <li>Personal Targets: Users can create their own targets only visible to them.</li>
+            <li>Global Targets: Can be created only by users with roles pa_target_admin, pa_admin, or pa_power_user.</li>
+            <li>The Target Gap shows the difference between the Indicator Score and the Target and is color-coded based on Indicator Direction.</li>
+            <li>Target Color Schemes define colors for different levels of deviation. Examples include:
+                <ul>
+                    <li>5-color scheme: Bright Red, Dark Red, Orange, Light Green, Dark Green</li>
+                    <li>3-color scheme: Customizable for simpler visual guidance</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>Improvement over Baseline</h4>
+        <ul>
+            <li>Automatic Target Calculation can set targets as an improvement over baseline values.</li>
+            <li>Choose calculation parameters:
+                <ul>
+                    <li>Measured as Percentage or Units</li>
+                    <li>Average of shown scores or existing target</li>
+                </ul>
+            </li>
+            <li>Indicator Direction determines whether improvement is added or subtracted.</li>
+            <li>Examples:
+                <ul>
+                    <li>Existing target: 200, 10% improvement → New target = 180</li>
+                    <li>Existing target: 200, 10 Units improvement → New target = 190</li>
+                </ul>
+            </li>
+            <li>Targets can be manually adjusted after automatic calculation.</li>
+        </ul>
+
+        <h4>Thresholds Overview</h4>
+        <ul>
+            <li>Thresholds notify when an Indicator is approaching specific conditions for early detection of unusual or critical behavior.</li>
+            <li>Thresholds can be Personal (visible only to the owner) or Global (visible to all, with notifications sent to added users).</li>
+            <li>Different types of Thresholds can be defined based on business requirements.</li>
+        </ul>
+
+        <h4>Notifications for Targets and Thresholds</h4>
+        <ul>
+            <li>Notifications are sent automatically when Targets or Thresholds are reached.</li>
+            <li>Add users to the Users Related List in the Target or Threshold form to receive notifications.</li>
+            <li>Personal Thresholds/Targets automatically notify the owner if subscribed.</li>
+            <li>Users can manage their notification subscriptions under User Preferences → Notifications → Advanced Preferences.</li>
+        </ul>
+
+        <p>
+            Proper use of Targets and Thresholds ensures measurable goals are tracked and deviations are promptly addressed, helping drive continuous process improvement.
+        </p>
+    </div>
+</body>
+</html>
